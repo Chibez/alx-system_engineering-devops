@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -c6- | grep -vP "[02468]\t" | cut -f2
+[ "$1" == "encode" ] && tr 'A-Za-z' 'N-ZA-Mn-za-m' || [ "$1" == "decode" ] && tr 'N-ZA-Mn-za-m' 'A-Za-z'
