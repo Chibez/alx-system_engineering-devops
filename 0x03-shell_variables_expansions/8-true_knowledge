@@ -1,2 +1,2 @@
 #!/bin/bash
-trueknowledge_value="$TRUEKNOWLEDGE"
+echo $((128 + TRUEKNOWLEDGE))
