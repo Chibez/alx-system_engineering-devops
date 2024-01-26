@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# This line specifies that the script should be interpreted using Bash.
+
+# Setting the initial value of the loop variable
+i=1
+
+# A while loop that runs as long as i is less than or equal to 10
+while [ $i -le 10 ]
+do
+    # This line will be executed in each iteration of the loop.
+    # It prints the text "Best School" to the console.
+    echo "Best School"
+    
+    # An if statement to check if i is equal to 9
+    if [ $i -eq 9 ]
+    then
+        # This line will be executed only when i is equal to 9.
+        # It prints the text "Hi" to the console.
+        echo "Hi"
+    fi
+    
+    # Incrementing the loop variable
+    ((i++))
+done
