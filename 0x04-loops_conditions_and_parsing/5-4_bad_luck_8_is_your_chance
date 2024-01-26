@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# This line specifies that the script should be interpreted using Bash.
+
+# Setting the initial value of the loop variable
+i=1
+
+# A while loop that runs as long as i is less than or equal to 10
+while [ $i -le 10 ]
+do
+    # An if-elif-else statement to check the value of i
+    if [ $i -eq 4 ]
+    then
+        # This block is executed if i is equal to 4
+        echo "bad luck"
+    elif [ $i -eq 8 ]
+    then
+        # This block is executed if i is equal to 8
+        echo "good luck"
+    else
+        # This block is executed for other values of i
+        echo "Best School"
+    fi
+    
+    # Incrementing the loop variable
+    ((i++))
+done
