@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script displays the content of the current directory in list format
+# Only displays the part of the name after the first dash
+
+mylist=$(ls)
+
+for filename in $mylist; do
+  # Extract the part of the name after the first dash
+  part_after_dash=$(echo "$filename" | cut -d '-' -f2)
+  
+  # Check if the extracted part is not empty
+  if [ -n "$part_after_dash" ]; then
+    echo "$part_after_dash"
+  fi
+done
