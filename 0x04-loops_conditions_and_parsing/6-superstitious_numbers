@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# This line specifies that the script should be interpreted using Bash.
+
+# Setting the initial value of the loop variable
+i=1
+
+# A while loop that runs as long as i is less than or equal to 20
+while [ $i -le 20 ]
+do
+  # Print the current value of i
+  echo "$i"
+
+  # A case statement to handle specific cases based on the value of i
+  case $i in
+    "4") echo "bad luck from China";;
+    "9") echo "bad luck from Japan";;
+    "17") echo "bad luck from Italy";;
+  esac
+
+  # Incrementing the loop variable
+  (( i++ ))
+done
