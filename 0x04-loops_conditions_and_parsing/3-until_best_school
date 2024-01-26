@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This line specifies that the script should be interpreted using Bash.
+
+# Setting the initial value of the loop variable
+i=1
+
+# An until loop that runs as long as i is not greater than 10
+until [ $i -gt 10 ]
+do
+    # This line will be executed in each iteration of the loop.
+    # It prints the text "Best School" to the console.
+    echo "Best School"
+    
+    # Incrementing the loop variable
+    ((i++))
+done
