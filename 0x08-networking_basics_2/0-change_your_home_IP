@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script customizes the host file on an Ubuntu server as follows:
+# **** localhost is set to resolve to 127.0.0.2
+# **** facebook.com is set to resolve to 8.8.8.8
+
+# Copy the original hosts file to a new file for modification
+cp /etc/hosts ~/hosts.new
+
+# Update localhost resolution in the new hosts file
+echo "127.0.0.2		localhost" > ~/hosts.new
+
+# Redirect facebook.com to use the IP address 8.8.8.8
+echo "8.8.8.8		facebook.com" >> ~/hosts.new
+
+# Overwrite the original hosts file with the modified one
+cp -f ~/hosts.new /etc/hosts
