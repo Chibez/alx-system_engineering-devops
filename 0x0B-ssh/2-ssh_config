@@ -1,0 +1,11 @@
+# SSH client configuration
+
+# Default settings
+Host *
+    # Disable password authentication
+    PasswordAuthentication no
+
+# Configuration for the server you want to connect to
+Host 34.229.72.113
+    # Specify the private key file
+    IdentityFile ~/.ssh/school
