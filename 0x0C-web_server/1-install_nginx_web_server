@@ -7,8 +7,8 @@ apt-get install -y nginx
 # Ensure nginx is listening on port 80
 sed -i 's/listen\s*80;/listen 80 default_server;/g' /etc/nginx/sites-available/default
 
-# Restart nginx service
-/etc/init.d/nginx restart
+# Restart nginx service without using systemctl
+service nginx restart > /dev/null
 
 # Create index.html file with "Hello World!" content
 echo "Hello World!" > /var/www/html/index.html
