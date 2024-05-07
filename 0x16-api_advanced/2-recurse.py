@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+"""
+Using reddit's API
+"""
+import requests
+after = None
+
+
 def recurse(subreddit, hot_list=[]):
     """returning top ten post titles recursively"""
     global after
@@ -17,4 +25,4 @@ def recurse(subreddit, hot_list=[]):
             hot_list.append(title_.get("data").get("title"))
         return hot_list
     else:
-        return None
+        return (None)
