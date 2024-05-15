@@ -1,4 +1,5 @@
-file { '/home/ubuntu/.ssh/config':
+#!/usr/bin/env bash
+file { 'ect/ssh/ssh_config':
   ensure  => present,
   owner   => 'ubuntu',
   group   => 'ubuntu', 
@@ -15,7 +16,7 @@ Host *
 Host 524063-web-01
     # Specify the private key file
     IdentityFile ~/.ssh/school
-    HostName 34.229.72.113
+    HostName 54.165.109.213
     User ubuntu
 ",
 }
